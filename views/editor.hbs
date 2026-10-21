@@ -1,0 +1,40 @@
+{{!-- Text editor view with rename, settings, and save controls. --}}
+<div id="ren_dial" style="visibility: hidden;" class="ren_dial">
+    <div class="names">
+        <h2>Zmiana nazwy pliku</h2>
+        <br>
+        <input id="new_name" type="text" name="name" class="inp">
+    </div>
+
+    <div class="buttons">
+        <input id="ren_ok" type="submit" value="ok" name="next" class="btn">
+        <input id="ren_cancel" type="submit" value="cancel" name="next" class="btn">
+    </div>
+</div>
+
+<div id="place" class="place">
+    <div class="settings">
+        <div id="font_d" class="font_d ins">font -</div>
+        <div id="ch_col" class="colors ins">kolory</div>
+        <div id="font_u" class="font_u ins">font +</div>
+    </div>
+    <br>
+    <div id="save_set" class="new">zapisz ustawienia</div>
+    <div class="new" id="rename">zmiana nazwy</div>
+    <a href="#" class="new blue">podgląd pliku</a>
+</div>
+
+<div id="f_name" class="filename">{{file_name}}</div>
+
+<div id="l_d" style="background-color: {{config.bgc}}; font-size: {{config.font}}px" class="lines">
+</div>
+<div>
+    <textarea name="file_content"
+        style="background-color: {{config.bgc}}; color: {{config.fc}}; font-size: {{config.font}}px" id="f_c" cols="80"
+        rows="19">{{show.txt}}</textarea>
+    <div id="save_chg" class="save">zapisz zmiany</div>
+</div>
+<div id="sets" style="display: none;">{{config.bgc}}-{{config.fc}}-{{config.font}}</div>
+<script src="scripts/count_lines.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/save.js"></script>

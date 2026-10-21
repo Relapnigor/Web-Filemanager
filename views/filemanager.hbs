@@ -1,0 +1,72 @@
+{{!-- Main file browser: navigation, upload, creation, and file actions. --}}
+{{#if diag.diag}}
+{{> dialog}}
+{{/if}}
+{{#if show.show}}
+{{#if show.txt}}
+<div class="txt">{{show.txt}}</div>
+{{/if}}
+{{#if show.img}}
+<img src="../upload/{{photo_path}}" alt="img" class="show">
+{{/if}}
+{{else}}
+<div class="place">
+    <form action="/filemanager" method="get">
+        <input type="radio" class="hide" name="path" value="{{c_path}}" checked>
+        <input type="submit" class="new" value="Nowy folder" name="tc">
+    </form>
+    {{#if format_path.paths}}
+    <form action="/filemanager" method="get">
+        <input type="radio" class="hide" name="path" value="{{c_path}}" checked>
+        <input type="submit" class="new" value="Zmiana nazwy folderu" name="tc">
+    </form>
+    {{/if}}
+    <form action="/filemanager" method="get">
+        <input type="radio" class="hide" name="path" value="{{c_path}}" checked>
+        <input type="submit" class="new" value="Nowy plik tekstowy" name="tc">
+    </form>
+    <form enctype="multipart/form-data" action="/filemanager?path={{c_path}}" method="post">
+        <div class="f_u_label">
+            <label for="fileupload">
+                <input type="file" multiple required name="fileupload" id="fileupload" class="f_upload">
+                <div class="choose">Wybierz</div>
+                <div class="f_u_button">
+                    +
+                </div>
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="Upload" class="u_file">
+        </div>
+    </form>
+</div>
+<div class="cont">
+    <div class="path">
+        <a href="/filemanager" class="p_part">home</a>
+        ㅤ>ㅤ
+        {{#each format_path.paths}}
+        <a href="/filemanager?path={{send}}" class="p_part">{{name}}</a>
+        ㅤ>ㅤ
+        {{/each}}
+    </div>
+    <div id="folders">
+        {{#each all_files.folders}}
+        <div class="folder">
+            <a href="/delete/d_{{name}}?path={{path}}" class="x">x</a><br>
+            <img src="{{fext name}}" alt="Brak ikony" class="ico"><br>
+            <a href="/filemanager?path={{path}}" class="d_name">{{name}}</a>
+        </div>
+        {{/each}}
+    </div>
+
+    <div id="files">
+        {{#each all_files.files}}
+        <div class="file">
+            <a href="/delete/f_{{name}}?path={{path}}" class="x">x</a><br>
+            <img src="{{fext name}}" alt="Brak ikony" class="ico"><br>
+            <a href="/show?f_name={{path}}" class="f_name">{{name}}</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

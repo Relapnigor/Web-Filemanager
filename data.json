@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-21",
+  "teamSize": 1,
+  "technologies": [
+    "Node.js",
+    "Express",
+    "Handlebars",
+    "JavaScript",
+    "CSS"
+  ],
+  "links": {
+    "github": "https://github.com/Relapnigor/DrMario"
+  },
+  "featured": false,
+  "translations": {
+    "pl": {
+      "title": "Web Filemanager",
+      "shortDescription": "Serwerowy menedżer plików napisany w Express i Handlebars.",
+      "description": "Lokalna aplikacja webowa do przeglądania, wysyłania, tworzenia, zmiany nazw, usuwania i pobierania plików. Zawiera również edytor tekstu, podgląd obrazów, filtry oraz ustawienia wyglądu edytora."
+    },
+    "en": {
+      "title": "Web Filemanager",
+      "shortDescription": "A server-rendered file manager built with Express and Handlebars.",
+      "description": "A local web application for browsing, uploading, creating, renaming, deleting, and downloading files. It also includes a text editor, image preview, filters, and editor appearance settings."
+    }
+  }
+}

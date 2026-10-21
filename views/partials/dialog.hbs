@@ -1,0 +1,30 @@
+{{!-- Reusable dialog for creating and renaming file-manager items. --}}
+<dialog open id="dial">
+    {{#if diag.rename}}
+    <form action="/filemanager/{{diag.type}}/rename?path={{c_path}}" method="get" class="dial">
+        <div class="names">
+            <h2>Zmiana nazwy {{diag.type}}u {{c_path}}</h2>
+            <br>
+            <input type="radio" class="hide" name="path" value="{{c_path}}" checked>
+            <input type="text" name="name" class="inp">
+        </div>
+        <div class="buttons">
+            <input type="submit" value="ok" name="next" class="btn">
+            <input type="submit" value="cancel" name="next" class="btn">
+        </div>
+    </form>
+    {{else}}
+    <form action="/filemanager/{{diag.type}}" method="get" class="dial">
+        <div class="names">
+            <h2>Nazwa nowego {{diag.type}}u</h2>
+            <br>
+            <input type="radio" class="hide" name="path" value="{{c_path}}" checked>
+            <input type="text" name="name" class="inp">
+        </div>
+        <div class="buttons">
+            <input type="submit" value="ok" name="next" class="btn">
+            <input type="submit" value="cancel" name="next" class="btn">
+        </div>
+    </form>
+    {{/if}}
+</dialog>

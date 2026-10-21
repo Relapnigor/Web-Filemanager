@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: darkslateblue;
+    width: 100vw;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.nav_a {
+    color: white;
+    margin: 25px;
+    font-size: 25px;
+}
+
+.place {
+    background-color: lightgrey;
+    color: grey;
+    height: calc(100vh - 150px - 20px);
+    min-height: calc(100vh - 150px - 20px);
+    width: 300px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.upload {
+    padding: 20px;
+    padding-left: 350px;
+}
+
+.sub {
+    padding: 5px;
+}
+
+td,
+th {
+    text-align: center;
+    font-weight: normal;
+    padding: 10px;
+    width: calc((100vw - 300px)/9);
+}
+
+th {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+table {
+    border: 0;
+}
+
+.show {
+    top: -100px;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+}
+
+p {
+    margin: 10px;
+    color: darkslateblue;
+    font-weight: bold;
+    margin-left: 330px;
+}
+
+span {
+    color: grey;
+}
+
+.info {
+    width: 900px;
+}
+
+.ico {
+    width: 50px;
+    height: auto;
+}
+
+.txt {
+    padding: 10px;
+}
+
+.new {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#dial {
+    margin: 200px auto;
+    background-color: darkslateblue;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.names {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.buttons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.dial {
+    height: 200px;
+}
+
+.inp {
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: gold;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.folder {
+    text-align: center;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    background-color: teal;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+.x {
+    float: right;
+    color: white;
+}
+
+.d_name {
+    margin: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#folders {
+    float: left;
+    width: calc(100vw - 340px);
+}
+
+.file {
+    text-align: center;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    background-color: darkmagenta;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+
+.f_name {
+    margin: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.f_upload {
+    display: none;
+    float: left;
+    position: relative;
+}
+
+.f_u_label {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.f_u_button {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    position: relative;
+    top: -50px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    position: relative;
+    left: 50px;
+}
+
+.u_file {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: dodgerblue;
+    position: relative;
+    top: -146px;
+    left: 150px;
+    border: 0px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.cont {
+    height: calc(100vh - 150px - 20px);
+    overflow: auto;
+}
+
+.path {
+    display: block;
+    width: calc(100vw - 340px);
+    margin: 5px;
+    padding: 10px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.p_part {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+
+.settings {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.yellow {
+    background-color: gold;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+.ins {
+    float: left;
+    width: calc(200px / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.font_d {
+    background-color: gold;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.colors {
+    background-color: coral;
+}
+
+.font_u {
+
+    background-color: orangered;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.filename {
+    z-index: -1;
+    position: relative;
+    background-color: darkgray;
+    height: 20px;
+    left: 10px;
+    color: white;
+}
+
+.lines {
+    float: left;
+    width: 30px;
+    border-right: 2px solid greenyellow;
+    color: dodgerblue;
+    text-align: right;
+    white-space: pre-wrap;
+    padding: 2px;
+    font-size: 21px;
+    height: calc(100vh - 150px - 20px);
+}
+
+#f_c {
+    resize: none;
+    float: left;
+    border: 0px;
+    margin: 1px;
+    box-sizing: border-box;
+    font-size: 20px;
+    overflow: auto;
+    max-width: 900px;
+}
+
+.save {
+    background-color: gold;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 50px;
+    bottom: 50px;
+}
+
+.ren_dial {
+    background-color: darkslateblue;
+    width: 500px;
+    height: 200px;
+    top: 200px;
+    left: calc(50vw - 250px);
+    border-radius: 10px;
+    position: absolute;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.opt {
+    float: left;
+    font-weight: bold;
+    text-decoration: none;
+    height: 50px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 350px;
+}
+
+.short_place {
+    background-color: lightgrey;
+    color: grey;
+    height: calc(100vh - 150px - 20px);
+    min-height: calc(100vh - 150px - 20px);
+    width: 150px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.short_new {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    width: 100px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.filters {
+    background-color: dimgrey;
+    color: grey;
+    height: calc(100vh - 150px - 20px);
+    min-height: calc(100vh - 150px);
+    width: 0px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    transition: width 1s;
+    overflow: auto;
+}
+
+.filt {
+    background-color: blueviolet;
+    height: 20px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit {
+    transition: width 1s;
+}
+
+.img_edit {
+    height: 250px;
+    width: auto;
+    border: 2px dashed black;
+    position: relative;
+    top: 175px;
+}
+
+.img_div {
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter_img {
+    background-size: 100px auto;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+}
+
+.filter_name {
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.preview {
+    position: absolute;
+    top: 0px;
+    background-color: #3e3f40;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-clear {
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-reg {
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.l_inp {
+    width: 250px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.l_inp[type=submit] {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.error {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}

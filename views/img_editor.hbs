@@ -1,0 +1,46 @@
+{{!-- Image editor view with filters, preview, rename, and save controls. --}}
+<div id="ren_dial" style="visibility: hidden;" class="ren_dial">
+    <div class="names">
+        <h2>Zmiana nazwy pliku</h2>
+        <br>
+        <input id="new_name" type="text" name="name" class="inp">
+    </div>
+
+    <div class="buttons">
+        <input id="ren_ok" type="submit" value="ok" name="next" class="btn">
+        <input id="ren_cancel" type="submit" value="cancel" name="next" class="btn">
+    </div>
+</div>
+
+<div id="place" class="short_place">
+    <div id="show_filters" class="short_new">Filters</div>
+</div>
+<div id="filters_div" class="filters">
+    <div class="filt">Filters</div>
+    {{#each effects}}
+    <div id="{{name}}">
+        <div style="background-image:url('upload/{{image_path}}');filter:{{name}}(100%)" class="filter_img"></div>
+        <div class="filter_name">{{name}}</div>
+    </div>
+    {{/each}}
+    <div id="none">
+        <div style="background-image:url('upload/{{photo_path}}');" class="filter_img"></div>
+        <div class="filter_name">none</div>
+    </div>
+</div>
+
+<div id="f_name" class="filename">{{file_name}}</div>
+
+</div>
+<div class="edit">
+    <div class="img_div">
+        <img src="upload/{{photo_path}}" alt="img" class="img_edit" id="img_edit">
+    </div>
+    <div class="edit options">
+        <div class="opt yellow" id="rename">zmiana nazwy</div>
+        <div id="save_chg" class="opt yellow">zapisz zmiany</div>
+        <a href="/previewFile?name={{file_name}}" class="blue opt">podgląd pliku</a>
+    </div>
+</div>
+
+<script src="scripts/filters.js"></script>
